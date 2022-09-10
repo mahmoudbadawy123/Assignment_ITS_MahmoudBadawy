@@ -96,6 +96,7 @@ export class AppComponent extends BaseComponent implements OnInit {
       (res: any) => {
         console.log(res);
         this.getItems();
+        this.Clear();
       },
       (error) => {
      

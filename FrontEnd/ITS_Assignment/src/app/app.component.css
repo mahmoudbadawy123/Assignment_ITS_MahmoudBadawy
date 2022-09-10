@@ -29,4 +29,6 @@ label {
 .Note {
     color: red;
     background: yellow;
+font-size: large;
+font-weight: bold;
 }
