@@ -1,0 +1,539 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.My_Btn ,.MyNavBtn ,.contbtnbgcolor {
+   
+    min-height: 40px;
+    border-radius: 4px;
+    font-size: 1.3em;
+    font-weight: bolder;
+    border: none;
+    margin: 20px  10px;
+    min-width: 150px;
+}
+.My_Btn , .MainColor {
+    background-color: #376ac8 !important;;
+    color: white;
+    /* font-size: x-large; */
+ }
+
+ .My_Btn:hover {
+  background-color: #60491c !important;;
+ }
+
+ .contbtnbgcolor {
+  background-color: #968861 !important;
+  color: white;
+  font-size: x-large;
+ }
+
+ .contbtnbgcolor:hover {
+  background-color: #60491c !important;
+ }
+ 
+.MyNavBtn {
+     background-color: #cdccc8;
+     color: black;
+  }
+
+  .is-active  , .MyNavBtn:hover {
+    background: #598b66;
+    color: white;
+}
+
+
+.mb-0 {
+    margin-bottom: 0px  !important;
+}
+
+
+.back-1{
+    background: #3F51B5;
+}
+
+.back-2{
+    background: yellow;
+}
+
+.back-3{
+    background: red;
+}
+
+.back-blue{
+    background: #3F51B5;
+    color: white;
+}
+
+.t-center{
+    text-align: center;
+}
+.card {
+    border: 1px solid gray;
+}
+
+
+.mat-icon {
+    font-size: 40px;
+}
+
+.Home-Container {
+    height: 100vh;
+}
+
+
+.Mymt-b-1{
+    margin: 3px 0px !important;
+}
+
+
+
+.matdrawercontent {
+    margin-bottom: 200px !important;
+}
+
+
+
+
+
+  /* 
+  تظبيط الكونتينر الى فى الؤئيسلا عشان ياخد كل الكونتينت و هى السبب فى الاسكرول  الافقى و الرئسى */
+  .mat-drawer-container {
+    height: 100%;
+    padding-bottom: 150px;
+    margin-bottom: 0px !important;
+    margin: 0px !important;
+    padding: 0px  !important;
+
+}
+
+
+
+
+.mat-drawer-container {
+  
+    overflow: auto !important;
+}
+
+
+
+
+.facursor {
+    cursor: pointer;
+}
+
+
+
+.TableBtn {
+    color: #c89637 !important;
+}
+.HeaderOfPobUps{
+    background: #c89637 !important;
+    color: white  !important;
+    padding: 10px 0px;
+    font-weight: bolder;
+}
+
+
+
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1.5rem !important;
+    text-align: right !important;
+    font-size: 20px !important;
+}
+
+/* حل قديم 24-12-2021 */
+/* .FormContainer {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+  } */
+
+  /* احدث حل لتظبيط بوظان الهيت بتاع الشاشات */
+  .FormContainer {
+    margin: 0;
+    height: fit-content;
+    display: block;
+    padding-bottom: 100px;
+    padding-right: 15px;
+
+}
+
+
+.LoginContainer {
+  /* background: tomato; */
+  height: 100%;
+  /* width: 100%; */
+  position: relative;
+  width: 75vw;
+
+}
+
+
+.LoginContainer .loginFormContainer {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+  width: 50vw;
+}
+
+
+.StepperContainer{
+  height: 100%;
+  position: relative;
+  /* width: 70vw; */
+  /* background: red; */
+}
+.StepperContainer .StepperFormContainer {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+  width: 50vw;
+}
+
+/* تجربه من اجل تصليح الهايت لكل الشاشات */
+/* .Module-Container{
+    width: 70vw !important;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+  }
+  
+  .FormContainer {
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0px !important;
+      width: 75vw;
+  }
+  
+  
+  .mat-horizontal-content-container {
+    overflow: hidden;
+    padding: 0 24px 60px 24px ;
+  } */
+  
+
+/* .Stepheight {
+    height: 500px;
+} */
+
+
+/* .fixed-height{
+    min-height: 1300px;
+  } */
+
+/* حلت امشكله بتاعت الحاجات الى بتختفى تحت و لكن بسبب استخدامها فى اماكن كتير متفرقه فهتبوظ حاجات تانيه فالحل اننا نعمل كاستوم ستايل و نستدعيه جنب الكونينر الى هيحتاج تظبيط بس */
+  /* .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    margin-bottom: 100px;
+} */
+
+.FixBottomBlock {
+    margin-bottom: 150px;
+    padding-bottom: 150px;
+}
+
+.FixBottomBlock_login {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+.StepperContainer{
+  height: 100%;
+  position: relative;
+  /* background: red; */
+  width: 70vw !important;
+}
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 0px) and (max-width: 575.98px) 
+ { 
+    .Module-Container{
+        height: 80vh !important;
+        width: 100vw !important;
+    }
+    .mat-drawer {
+        width: 55% !important;
+      }
+    
+
+      .StepperContainer {
+        width: 100vw !important;
+      }
+
+ 
+
+    } 
+
+ @media (min-width: 0px) and (max-width: 800px) 
+ { 
+
+      .mat-vertical-content , .mat-stepper-vertical  {
+        padding: 0px !important;
+      }
+
+      .container-fluid-vertical {
+        padding: 10px !important;
+      }
+
+      .My_Btn {
+        font-size: 0.9rem;
+      }
+ }
+
+
+ /* @media (min-width: 801px) and (max-width: 1000px) 
+ { 
+
+      .StepperContainer {
+        width: 70vw !important;
+      }
+ } */
+
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767.98px)  { 
+    .Module-Container{
+    height: 80vh !important;
+    width: 100vw !important;
+}
+
+.mat-drawer {
+    width: 55% !important;
+  }
+
+
+  .StepperContainer {
+    width: 100vw !important;
+  }
+
+
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 991.98px)  { 
+    .Module-Container{
+        height: 80vh !important;
+        width: 100vw !important;
+    }
+
+    .mat-drawer {
+        width: 30% !important;
+      }
+      .FormContainer {
+        padding-right: 75px !important;
+    }
+
+
+    .LoginContainer {
+      /* background: tomato; */
+      padding-right: 15px !important;
+    
+    }
+
+  
+
+    .StepperContainer{
+      height: 100%;
+      /* width: 100%; */
+      position: relative;
+      width: 70vw !important;
+      /* padding-right: 15px !important; */
+    }
+
+    .My_Btn {
+      font-size: 1rem;
+    }
+ }
+
+/* // Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1399.98px)  {     
+    .Module-Container{
+        height: 80vh !important;
+        width: 70vw !important;
+    }
+
+    .mat-drawer {
+        width: 30% !important;
+      }
+
+ }
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1400px) and (max-width: 9999.98px)  {     
+    .Module-Container{
+        height: 80vh !important;
+        width: 70vw !important;
+    }
+      .mat-drawer {
+        width: 30% !important;
+      }
+ }
+
+
+ .mat-horizontal-content-container {
+    padding: 0px !important;
+}
+
+ .mat-stepper-horizontal {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+
+
+.UpdateBTN{
+    color:#5757bd;
+    font-weight:bolder;
+    font-size: large;
+  }
+  
+
+  .TotalCoast {
+      /* background-color: black !important; */
+      color: rgb(160, 9, 9) !important;
+      font-weight: bolder !important;
+      text-align: center;
+      display: block;
+      margin: auto;
+  }
+
+  .CursorPointer {
+      cursor: pointer  !important;
+  }
+
+
+  /* animations  */
+.bounceInDown {
+    animation-name: bounceInDown;
+  }
+  
+  
+  @keyframes bounceInDown {
+    0%, 60%, 75%, 90%, 100% {
+      transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+  
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -3000px, 0) scaleY(5);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translate3d(0, 25px, 0) scaleY(.9);
+    }
+  
+    75% {
+      transform: translate3d(0, -10px, 0) scaleY(.95);
+    }
+  
+    90% {
+      transform: translate3d(0, 5px, 0) scaleY(.985);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+
+  .TermCondBtn{
+    border: none;
+    color: #00b7ff;
+  }
+
+  
+.TermsAndCondations {
+  /* height: 400px; */
+  overflow-y: auto;
+}
+
+
+.bordernone{
+  border: none;
+  cursor: pointer;
+}
+.Maticons {
+  font-size: x-large;
+}
+
+
+
+
+.fa-edit , .fa-trash-alt , .fa-desktop , .MyFaStyle
+{
+  color: #ac8013 !important;
+}
+
+
+
+
+
+
+
+
+.mat-row:nth-child(even) {background: rgba(236, 229, 212, 0.966)}
+.mat-row:nth-child(odd) {background: #FFF}
+
+
+.mat-row:hover {
+  background-color: #CCC;
+}
+.mat-row mat-checkbox {
+  display: none;
+}
+.mat-row:hover mat-checkbox {
+ display: block;
+}
+
+
+
+.clickbtn {
+  display: inline-block;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: white;
+  color: white;
+  background-color:      #c89637;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-top: 40px;
+  padding: 8px;
+  font-weight: bolder;
+}
+
+.clickbtn:hover {
+  background-color: #60491c;
+  color: white !important;
+ }
+
+
+
+
+ ::ng-deep .mat-horizontal-stepper-header ,  ::ng-deep .mat-vertical-stepper-header{
+  pointer-events: none !important;
+}
+
+ /* disable stepper head*/

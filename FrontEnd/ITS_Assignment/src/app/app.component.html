@@ -1,0 +1,208 @@
+<div class="W-100 Border ">
+
+  <div class="Header">
+  </div>
+
+  <div class="container-fluid pt-5 mt-5 ">
+    <span class="Note">
+      the Form is done with Validations So Save Btn will be visable in case the form is Valid
+    </span>
+    <form [formGroup]="MyForm" class="row">
+
+      <div class="form-group row mt-4">
+        <label for="CustomerName" class="col-sm-2 col-form-label text-left">Customer Name</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="CustomerName" id="CustomerName"
+            placeholder="Customer Name">
+          <small *ngIf="form['CustomerName'].hasError('required') && 
+                form['CustomerName'].touched" class="form-text text-danger">
+            pls Enter Customer Name </small>
+          <small *ngIf="form['CustomerName'].touched && form['CustomerName'].hasError('pattern')"
+            class="form-text text-danger"> Customer Name is not Valid </small>
+        </div>
+
+
+
+        <label for="Class" class="col-sm-1 col-form-label text-center">Class</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" formControlName="Class" id="Class" placeholder="Class">
+          <small *ngIf="form['Class'].hasError('required') && 
+                form['Class'].touched" class="form-text text-danger">
+            pls Enter Class </small>
+          <small *ngIf="form['Class'].touched && form['Class'].hasError('pattern')" class="form-text text-danger"> Class
+            Name is not Valid </small>
+        </div>
+      </div>
+
+
+
+      <div class="form-group row  mt-4">
+
+        <label for="Phone" class="col-sm-2 col-form-label text-left">Phone</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="Phone" id="Phone" placeholder="Phone">
+          <small *ngIf="form['Phone'].hasError('required') && 
+          form['Phone'].touched" class="form-text text-danger">
+            pls Enter Mobile Num</small>
+          <small *ngIf="form['Phone'].touched && form['Phone'].hasError('pattern')" class="form-text text-danger">
+            Mobile Num is not Valid </small>
+        </div>
+
+        <label for="Email" class="col-sm-1 col-form-label text-center">Email</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" formControlName="Email" id="Email" placeholder="Email">
+          <small *ngIf="form['Email'].hasError('required') && 
+          form['Email'].touched" class="form-text text-danger">
+            pls Enter Email </small>
+          <small *ngIf="form['Email'].touched && form['Email'].hasError('Email')" class="form-text text-danger"> Email
+            is not Valid </small>
+        </div>
+
+      </div>
+
+
+
+
+
+      <div class="form-group row mt-4">
+
+        <label for="Comment" class="col-sm-2 col-form-label text-left">Comment</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" formControlName="Comment" id="Comment" placeholder="Comment">
+        </div>
+      </div>
+
+
+
+
+      <div class="row mt-5">
+
+        <div class="col-sm-4 col-form-label text-left"> </div>
+
+
+        <div class="col-sm-8 col-form-label text-left">
+          <div class="d-block     text-center float-right ">
+            <button mat-button (click)="Clear()" class="btn btn-primary marginleft widthBtn">
+              Clear
+            </button>
+
+            <button mat-button (click)="Add()" [disabled]="MyForm.invalid || OnSelectMode"class="btn btn-primary marginleft widthBtn">
+              Save
+            </button>
+
+            <button mat-button (click)="Update()"  [disabled]="MyForm.invalid" class="btn btn-primary marginleft widthBtn">
+              Update
+            </button>
+
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    </form>
+
+
+
+
+
+    <mat-table #table matSort (matSortChange)="onSort($event)" [dataSource]="row" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header="id">
+          ID  
+          <span> {{SortDataID}} </span>
+        </mat-header-cell>
+
+        <mat-cell *matCellDef="let element"  data-label="id">
+           {{element.id}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="customerName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header="customerName"> CustomerName 
+          <span> {{SortDatacustomerName}} </span>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element" data-label="customerName"> {{element.customerName}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="class">
+        <mat-header-cell *matHeaderCellDef mat-sort-header="class"> Class
+          <span> {{SortDataclass}} </span>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element" data-label="class"> {{element.class}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="phone">
+        <mat-header-cell *matHeaderCellDef mat-sort-header="phone"> Phone
+        
+          <span> {{SortDataphone}} </span>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element" data-label=" phone"> {{element.phone}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef mat-sort-header="email"> Email 
+
+          <span> {{SortDataemail}} </span>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element" data-label=" email"> {{element.email}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="comment">
+        <mat-header-cell *matHeaderCellDef mat-sort-header="comment"> Comment 
+          <span> {{SortDatacomment}} </span>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element" data-label=" comment"> {{element.comment}} </mat-cell>
+      </ng-container>
+
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row   (click)="showSelect(row)" *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <!-- <mat-paginator [length]="Mypage.TotalElements" [pageSize]="5" [pageSizeOptions]="[1,5, 10, 25, 100]"
+      (page)="paginatorEvent = getServerData($event)">
+    </mat-paginator> -->
+
+
+
+    <div class="row mt-5">
+
+      <div class="col-sm-4 col-form-label text-left"> </div>
+
+
+      <div class="col-sm-8 col-form-label text-left">
+        <div class="d-block     text-center float-right ">
+          <button mat-button  [disabled]="!OnSelectMode" (click)="Delete()" class="btn btn-warning marginleft widthBtn">
+            Delete
+          </button>
+
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <!-- <div class="row mt-5">
+
+      <div class="col-sm-4 col-form-label text-left"> </div>
+
+
+      <div class="col-sm-8 col-form-label text-left">
+        <div class="d-block     text-center float-right ">
+          <button mat-button (click)="Delete()" class="btn btn-warning marginleft widthBtn">
+            Delete
+          </button>
+
+
+
+        </div>
+      </div>
+
+
+
+    </div> -->
+
+  </div>
+</div>
